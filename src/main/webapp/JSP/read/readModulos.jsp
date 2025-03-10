@@ -9,31 +9,31 @@
 <body>
 
 <c:import url="/INC/header.jsp"/>
-<h1 class="fw-bold text-center mb-4">leer profesores</h1>
+<h1 class="fw-bold text-center mb-4">leer modulos</h1>
 <main class="d-flex justify-content-center align-items-center mt-5 p-3">
-    <c:if test="${requestScope.ciclos.size() > 0}">
-
-        <table class="mx-auto p-5 bg-light rounded-3 shadow-lg w-75 table">
-            <thead class="table-secondary">
+    <table class="mx-auto p-5 bg-light rounded-3 shadow-lg w-75 table">
+        <thead class="table-secondary">
+        <tr>
+            <th>modulo</th>
+            <th>profesores que lo imparten</th>
+        </tr>
+        </thead>
+        <tbody class="table-primary">
+        <c:forEach var="m" items="${requestScope.modulos}">
             <tr>
-                <th>profesor</th>
-                <th>módulos</th>
+                <td class="align-middle">${m.titulo}</td>
+                <td class="d-flex flex-column">
+                    <c:if test="${empty m.profesores}">
+                        <span>ningún profesor imparte este módulo</span>
+                    </c:if>
+                    <c:forEach var="profesor" items="${m.profesores}">
+                        <span>${profesor.nombre}</span>
+                    </c:forEach>
+                </td>
             </tr>
-            </thead>
-            <tbody class="table-primary">
-            <c:forEach var="p" items="${requestScope.profesor}">
-                <tr>
-                    <td>${p.nombre}</td>
-                    <td>
-                        <c:forEach var="modulo" items="${p.modulos}">
-                            <span>${modulo.titulo}</span>
-                        </c:forEach>
-                    </td>
-                </tr>
-            </c:forEach>
-            </tbody>
-        </table>
-    </c:if>
+        </c:forEach>
+        </tbody>
+    </table>
 </main>
 
 <c:import url="/INC/footer.jsp"/>

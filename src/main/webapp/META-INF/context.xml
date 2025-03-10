@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/RuizHJAUEC" reloadable="true">
+<Context path="/RuizHJNAN" reloadable="true">
     <Resource auth="Container"
               driverClassName="com.mysql.cj.jdbc.Driver"
               maxTotal="100"

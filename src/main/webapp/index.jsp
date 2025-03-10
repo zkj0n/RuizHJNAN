@@ -19,8 +19,8 @@
     <div class="container overflow-hidden">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="mb-4">uno a muchos
-                    <span class="text-danger"> bidireccional </span>
+                <h1 class="mb-4">anotación
+                    <span class="text-danger"> muchos a muchos </span>
                 </h1>
             </div>
             <div class="col-12 text-center">
@@ -34,7 +34,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center shadow">
-                <video class="shadow rounded" src="IMG/lv.mp4" autoplay loop muted style="max-width: 50vw; max-height: 50vh; object-fit: cover;"></video>
+                <video class="shadow rounded" src="IMG/live.mp4" autoplay loop muted style="max-width: 50vw; max-height: 50vh; object-fit: cover;"></video>
             </div>
         </div>
     </div>
